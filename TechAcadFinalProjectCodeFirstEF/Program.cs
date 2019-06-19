@@ -10,9 +10,7 @@ namespace TechAcadFinalProjectCodeFirstEF
     {
         static void Main(string[] args)
         {
-             
 
-            
         }
     }
 }

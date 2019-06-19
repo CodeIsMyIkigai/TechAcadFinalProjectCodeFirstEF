@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TechAcadFinalProjectCodeFirstEF
 {
-    class ContactNumber
+    public class ContactNumber
     {
         public int Id { get; set; }
         public string Type { get; set; }
