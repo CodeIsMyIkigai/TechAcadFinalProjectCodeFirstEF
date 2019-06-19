@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- Normally in an application when you are getting data to insert into a program you would have it in some sort of file
- already.  However as the project requirements said to make this project as simple as possible I've created them here
- already consumed and inserted inth the data model format.
+ Normally in an application when you are getting data to insert into a program you would have it in some sort of data 
+ source already and you would retrieve it appropriately.  However as the project requirements said to make this project
+ as simple as possible, I've created them here already consumed and inserted inth the data model format.
 
 Fake data generated from various freely avialable websites.
 
@@ -19,8 +19,6 @@ namespace TechAcadFinalProjectCodeFirstEF
     {
         public static List<Contact> GetContacts()
         {
-            List<Contact> contacts = new List<Contact>();
-
             List<ContactNumber> contactNumbers = new List<ContactNumber>
             {
                 new ContactNumber() { Id = 0, Type = "Home", Number = "(828) 886-4679" },
@@ -85,29 +83,31 @@ namespace TechAcadFinalProjectCodeFirstEF
                 new ContactNumber() { Id = 19, Type = "Work", Number = "(851) 588-4900" }
             };
 
+            List<Contact> contacts = new List<Contact>
+            {
+                new Contact { Id = 0, FirstName = "Clywd", LastName = "Kalinsky", Email = "ckalinskyj@bloomberg.com" },
+                new Contact { Id = 1, FirstName = "Waverley", LastName = "Kneesha", Email = "wkneesha0@addthis.com" },
+                new Contact { Id = 2, FirstName = "Noak", LastName = "Livesey", Email = "nlivesey1@youtu.be" },
+                new Contact { Id = 3, FirstName = "Dennie", LastName = "Odams", Email = "dodams2@is.gd" },
+                new Contact { Id = 4, FirstName = "Bjorn", LastName = "Kilfeder", Email = "bkilfeder3@geocities.jp" },
+                new Contact { Id = 5, FirstName = "Asia", LastName = "Steely", Email = "asteely4@seesaa.net" },
+                new Contact { Id = 6, FirstName = "Alanson", LastName = "California", Email = "acalifornia5@mac.com" },
+                new Contact { Id = 7, FirstName = "Shel", LastName = "Vanne", Email = "svanne6@istockphoto.com" },
+                new Contact { Id = 8, FirstName = "Mitch", LastName = "Ruperto", Email = "mruperto7@ebay.co.uk" },
+                new Contact { Id = 9, FirstName = "Gertruda", LastName = "McKaile", Email = "gmckaile8@mysql.com" },
+                new Contact { Id = 10, FirstName = "Jonas", LastName = "Melesk", Email = "jmelesk9@cbc.ca" },
+                new Contact { Id = 11, FirstName = "Brendon", LastName = "Surcomb", Email = "bsurcomba@gov.uk" },
+                new Contact { Id = 12, FirstName = "Susana", LastName = "Wrotham", Email = "swrothamb@odnoklassniki.ru" },
+                new Contact { Id = 13, FirstName = "Norby", LastName = "Swepstone", Email = "nswepstonec@xrea.com" },
+                new Contact { Id = 14, FirstName = "Findley", LastName = "Goodding", Email = "fgooddingd@gnu.org" },
+                new Contact { Id = 15, FirstName = "Jsandye", LastName = "Esplin", Email = "jespline@alexa.com" },
+                new Contact { Id = 16, FirstName = "Marion", LastName = "Bartholin", Email = "mbartholinf@go.com" },
+                new Contact { Id = 17, FirstName = "Goldia", LastName = "Brockett", Email = "gbrockettg@histats.com" },
+                new Contact { Id = 18, FirstName = "Sig", LastName = "Pol", Email = "spolh@zimbio.com" },
+                new Contact { Id = 19, FirstName = "Cassandra", LastName = "Downham", Email = "cdownhami@abc.net.au" }
+            };
 
-            contacts.Add(new Contact { Id = 0, FirstName = "Clywd", LastName = "Kalinsky", Email = "ckalinskyj@bloomberg.com" });
-            contacts.Add(new Contact { Id = 1, FirstName = "Waverley", LastName = "Kneesha", Email = "wkneesha0@addthis.com" });
-            contacts.Add(new Contact { Id = 2, FirstName = "Noak", LastName = "Livesey", Email = "nlivesey1@youtu.be" });
-            contacts.Add(new Contact { Id = 3, FirstName = "Dennie", LastName = "Odams", Email = "dodams2@is.gd" });
-            contacts.Add(new Contact { Id = 4, FirstName = "Bjorn", LastName = "Kilfeder", Email = "bkilfeder3@geocities.jp" });
-            contacts.Add(new Contact { Id = 5, FirstName = "Asia", LastName = "Steely", Email = "asteely4@seesaa.net" });
-            contacts.Add(new Contact { Id = 6, FirstName = "Alanson", LastName = "California", Email = "acalifornia5@mac.com" });
-            contacts.Add(new Contact { Id = 7, FirstName = "Shel", LastName = "Vanne", Email = "svanne6@istockphoto.com" });
-            contacts.Add(new Contact { Id = 8, FirstName = "Mitch", LastName = "Ruperto", Email = "mruperto7@ebay.co.uk" });
-            contacts.Add(new Contact { Id = 9, FirstName = "Gertruda", LastName = "McKaile", Email = "gmckaile8@mysql.com" });
-            contacts.Add(new Contact { Id = 10, FirstName = "Jonas", LastName = "Melesk", Email = "jmelesk9@cbc.ca" });
-            contacts.Add(new Contact { Id = 11, FirstName = "Brendon", LastName = "Surcomb", Email = "bsurcomba@gov.uk" });
-            contacts.Add(new Contact { Id = 12, FirstName = "Susana", LastName = "Wrotham", Email = "swrothamb@odnoklassniki.ru" });
-            contacts.Add(new Contact { Id = 13, FirstName = "Norby", LastName = "Swepstone", Email = "nswepstonec@xrea.com" });
-            contacts.Add(new Contact { Id = 14, FirstName = "Findley", LastName = "Goodding", Email = "fgooddingd@gnu.org" });
-            contacts.Add(new Contact { Id = 15, FirstName = "Jsandye", LastName = "Esplin", Email = "jespline@alexa.com" });
-            contacts.Add(new Contact { Id = 16, FirstName = "Marion", LastName = "Bartholin", Email = "mbartholinf@go.com" });
-            contacts.Add(new Contact { Id = 17, FirstName = "Goldia", LastName = "Brockett", Email = "gbrockettg@histats.com" });
-            contacts.Add(new Contact { Id = 18, FirstName = "Sig", LastName = "Pol", Email = "spolh@zimbio.com" });
-            contacts.Add(new Contact { Id = 19, FirstName = "Cassandra", LastName = "Downham", Email = "cdownhami@abc.net.au" });
-
-            foreach(Contact contact in contacts)
+            foreach (Contact contact in contacts)
             {
                 contact.ContactNumbers = contactNumbers.Where(cn => cn.Id == contact.Id).ToList();
             }
