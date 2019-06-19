@@ -13,11 +13,8 @@ namespace TechAcadFinalProjectCodeFirstEF
         public string LastName { get; set; }
         public string Email { get; set; }
 
-        public List<ContactNumber> Numbers;
+        public virtual List<ContactNumber> ContactNumbers { get; set; }
 
-        public Contact()
-        {
-            Numbers = new List<ContactNumber>();
-        }
+        
     }
 }
